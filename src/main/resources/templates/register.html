@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inscription</title>
+</head>
+<body>
+    <h1>Page d'inscription</h1>
+    <div th:if="${successMessage != null}" style="color: green;">
+        <p th:text="${successMessage}"></p>
+    </div>
+    <form th:action="@{/users/register}" method="post">
+        <label for="username">Nom d'utilisateur :</label>
+        <input type="text" id="username" name="username" required /><br>
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required /><br>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+</body>
+</html>

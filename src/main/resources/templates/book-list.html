@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des Livres</title>
+</head>
+<body>
+    <h1>Liste des Livres</h1>
+    <ul>
+        <li th:each="book : ${books}" th:text="${book}"></li>
+    </ul>
+    <a th:href="@{/book-form}">Ajouter un Livre</a>
+</body>
+</html>
